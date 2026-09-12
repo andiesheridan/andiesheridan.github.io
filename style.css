@@ -1,12 +1,5 @@
 /*
 ******** Site-wide styling ********
-
-<Desktop>
-Make Andie's face clickable
-A little more space under mustache cover
-
-<Medium>
-Read for free here underlined
 */
 * {
   padding: 0;
@@ -242,6 +235,13 @@ a:hover {
     margin-top: 25px;
     margin-bottom: 75px;
   }
+
+  .content-trim .lophie img {
+    height: 75px;
+    max-width: 100px;
+    margin-top: 25px;
+    margin-bottom: 75px;
+  }
 }
 
 /*
@@ -344,7 +344,7 @@ a:hover {
 }
 
 .mustache-text {
-  padding-top: 8px;
+  padding-top: 16px;
   font-size: 18px;
   color: #d05749;
 }
@@ -369,6 +369,7 @@ a:hover {
   .mustache-read-here {
     padding-top: 8px;
     font-size: 18px;
+    text-decoration: underline;
   }
 }
 
