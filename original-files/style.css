@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+a:link {
+  color: #d05749;
+}
+
+a:visited {
+  color: #d05749;
+}
+
+a:hover {
+  color: red;
+}
+
+.sidebar {
+  /*Side nav menu*/
+  position: absolute;
+  width: 500px;
+  height: 100%;
+  background-color: white;
+  top: 10px;
+}
+
+.sidebar .logo img {
+  /*Self portrait logo button*/
+  top: 10px;
+  margin-left: 0px;
+  width: 210px;
+  border-radius: 50%;
+  float: left;
+}
+
+.sidebar .nav-buttons img {
+  /*Stamp icons*/
+  width: 100px;
+  float: left;
+}
+
+.sidebar .nav-text0 {
+  margin-top: 100px;
+  margin-left: 50px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  color: red;
+}
+
+.sidebar .nav-text1 {
+  margin-top: 10px;
+  margin-left: 50px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  color: #ff9587;
+}
+
+.sidebar .nav-text2 {
+  margin-top: 10px;
+  margin-left: 50px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  color: #ff9587;
+}
+
+.sidebar .nav-text3 {
+  margin-top: 10px;
+  margin-left: 50px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  color: #ff9587;
+}
+
+.photobar {
+  /*Home page photo box*/
+  position: absolute;
+  margin-left: 500px;
+  width: 900px;
+  height: 100%;
+  background-color: white;
+  top: 10px;
+}
+
+.photobar .homephoto1 img {
+  /*Andiedog pic position*/
+  position: absolute;
+  width: 330px;
+  height: auto;
+  margin-left: 140px;
+  margin-top: 15px;
+}
+
+.photobar .homephoto2 img {
+  /*Andiecherry pic position*/
+  position: absolute;
+  width: 450px;
+  height: auto;
+  margin-left: 165px;
+  margin-top: 470px;
+}
+
+.photobar .home-butterfly1 img {
+  /*Home page butterfly dividers*/
+  position: absolute;
+  height: 220px;
+  margin-top: 15px;
+}
+
+.photobar .home-butterfly2 img {
+  position: absolute;
+  height: 220px;
+  margin-top: 265px;
+}
+
+.photobar .home-butterfly3 img {
+  position: absolute;
+  height: 220px;
+  margin-top: 515px;
+}
+
+.photobar .home-apple img {
+  /*Home apple icon*/
+  position: absolute;
+  height: 200px;
+  margin-top: 490px;
+  margin-left: 615px;
+}
+
+.photobar .poetrybio {
+  /*Poetry bio*/
+  position: absolute;
+  margin-top: 70px;
+  margin-left: 490px;
+  font-size: 22px;
+  color: #d05749;
+}
+
+.mustachebar {
+  /*My Mustache page right box*/
+  position: absolute;
+  margin-left: 500px;
+  width: 900px;
+  height: 100%;
+  background-color: white;
+  top: 10px;
+}
+
+.mustachebar .mustache-butterfly1 img {
+  /*Mustache page butterfly dividers*/
+  position: absolute;
+  height: 220px;
+  margin-top: 15px;
+}
+
+.mustachebar .mustache-butterfly2 img {
+  position: absolute;
+  height: 220px;
+  margin-top: 265px;
+}
+
+.mustachebar .mustache-butterfly3 img {
+  position: absolute;
+  height: 220px;
+  margin-top: 515px;
+}
+
+.photobar .home-apple img {
+  position: absolute;
+  height: 280px;
+  margin-top: 490px;
+  margin-left: 615px;
+}
+.mustachebar .mustachetext {
+  /*My mustache summary*/
+  position: absolute;
+  margin-top: 520px;
+  margin-left: 140px;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #d05749;
+}
+
+.mustachebar .mustachereadhere {
+  /*My Mustache read here text*/
+  position: absolute;
+  margin-top: 710px;
+  margin-left: 140px;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.mustachebar .mustachephoto img {
+  /*My Mustache cover*/
+  position: absolute;
+  margin-top: 50px;
+  width: 450px;
+  margin-left: 310px;
+}
+
+.otherpoetrybar {
+  /*Other Poetry page right box*/
+  position: absolute;
+  margin-left: 500px;
+  width: 900px;
+  height: 100%;
+  background-color: white;
+  top: 0px;
+  font-size: 17px;
+}
+
+.otherpoetrybar .otherpoetrytext {
+  /*Other poetry text*/
+  margin-top: 50px;
+  margin-left: 30px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #d05749;
+  position: absolute;
+}
+
+.otherpoetrybar .otherpoetrytext .otherpoetrytitle {
+  /*Other Poetry title*/
+  text-decoration: underline;
+}
+
+.otherpoetrybar .otherpoetrytext .op-images/caterpillar img {
+  width: 300px;
+  margin-left: 450px;
+}
+
+.contactbar {
+  position: absolute;
+  margin-left: 500px;
+  width: 900px;
+  height: 100%;
+  background-color: white;
+  top: 10px;
+  font-size: 24px;
+}
+
+.contactbar .contactgif img {
+  /*Contact Page GIF*/
+  position: absolute;
+  margin-left: 130px;
+  margin-top: 50px;
+  width: 700px;
+}
+
+.contactbar .contacttext {
+  /*Contact Page text*/
+  position: absolute;
+  margin-left: 140px;
+  margin-top: 630px;
+  color: #d05749;
+}
+
+.contactbar .contactmailicon img {
+  /*Contact Page mail icon*/
+  position: absolute;
+  margin-left: 750px;
+  margin-top: 600px;
+  width: 90px;
+}
+
+.contactbar .contact-apple1 img {
+  /*Contact page apple dividers*/
+  position: absolute;
+  height: 100px;
+  margin-top: 150px;
+}
+
+.contactbar .contact-apple2 img {
+  position: absolute;
+  height: 100px;
+  margin-top: 300px;
+}
+
+.contactbar .contact-apple3 img {
+  position: absolute;
+  height: 100px;
+  margin-top: 450px;
+}

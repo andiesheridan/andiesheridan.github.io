@@ -1,0 +1,443 @@
+/*
+******** Site-wide styling ********
+
+<Desktop>
+Make Andie's face clickable
+A little more space under mustache cover
+
+<Medium>
+Read for free here underlined
+*/
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+}
+
+a:link,
+a:visited {
+  color: #d05749;
+}
+
+a:hover {
+  color: red;
+}
+
+/* navigation styling */
+.navigation {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  background-color: white;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation .logo-and-name {
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  color: red;
+}
+
+.navigation .logo img {
+  max-width: 225px;
+}
+
+.navigation #menu-toggle {
+  display: none;
+}
+
+.navigation .nav-item {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+}
+
+.navigation .nav-item a {
+  display: inline-block;
+}
+
+.navigation .nav-item img {
+  /* the stamp icons */
+  height: 100px;
+}
+
+/* page content styling */
+.content {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.content-trim .trim-butterfly img {
+  height: 220px;
+  margin-top: 25px;
+}
+
+.content-trim .trim-apple img {
+  height: 125px;
+  margin-top: 50px;
+}
+
+.content-body {
+  display: flex;
+  flex-direction: column;
+  color: #d05749;
+  padding-left: 16px;
+}
+
+/* Medium sized screen styling */
+@media (max-width: 1100px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .navigation {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navigation .logo-and-name {
+    font-size: 24px;
+  }
+
+  .navigation .logo img {
+    max-width: 116px;
+  }
+
+  .navigation .menu-toggle {
+    /* don't show the menu icon on anything larger than a small screen, menu options show by default */
+    display: none;
+  }
+
+  .navigation .nav-items {
+    flex-direction: row;
+    padding-left: 16px;
+  }
+
+  .navigation .nav-item {
+    font-size: 16px;
+  }
+
+  .navigation .nav-item img {
+    /* the stamp icons */
+    height: 50px;
+  }
+
+  .content {
+    width: auto;
+    padding-top: 0px;
+  }
+}
+
+/* Small sized screen styling */
+@media (max-width: 644px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .navigation {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation .logo-and-name {
+    align-self: start;
+    font-size: 24px;
+    margin-right: 48px;
+  }
+
+  .navigation .logo img {
+    max-width: 116px;
+  }
+
+  /* menu toggle styling */
+  /* 
+  a hacky way to get interactibility in a static html/css site -- a checkbox in disguise that toggles open the menu
+  usually a checkbox input has the box and the label like so: "[ ] label". we are essentially stacking them on one another, making the box itself
+  invisible, and making the label an image of a hamburger menu using background-image 
+  */
+  .navigation #menu-toggle,
+  label {
+    /* put both the checkbox and the hamburger icon in the same spot on the top right */
+    display: block;
+    position: absolute;
+    top: 64px;
+    right: 24px;
+  }
+
+  .navigation #menu-toggle {
+    /* the toggle itself (which is a checkbox) is unseen */
+    opacity: 0;
+  }
+
+  .navigation label {
+    /* style the label of the checkbox to be a menu icon */
+    cursor: pointer;
+    background-image: url(images/menu-icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 15px;
+  }
+
+  input:checked ~ label {
+    /* when the menu is toggled, switch from hamburger icon to appleandworm :-) */
+    background-image: url(images/appleandworm.jpg);
+    background-size: contain;
+  }
+
+  .navigation .nav-items {
+    flex-direction: column;
+    padding-left: 16px;
+    display: none;
+  }
+
+  .navigation .nav-item {
+    font-size: 16px;
+  }
+
+  .navigation .nav-item img {
+    height: 50px;
+  }
+
+  input:checked ~ .nav-items {
+    /* when the menu is toggled, show the navigation items (toggle from display: none to display: block */
+    display: block;
+  }
+
+  .content {
+    width: auto;
+  }
+
+  .content-trim {
+    align-self: flex-start;
+  }
+
+  .content-trim .trim-butterfly img {
+    height: 132px;
+    margin-top: 25px;
+    margin-bottom: 75px;
+  }
+
+  .content-trim .trim-apple img {
+    height: 75px;
+    margin-top: 25px;
+    margin-bottom: 75px;
+  }
+}
+
+/*
+******** Home page specific styling ********
+*/
+.home-content-row-1 {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+}
+
+.home-content-row-1 .andie-dog {
+  width: 40%;
+  min-width: 260px;
+  max-width: 330px;
+  height: auto;
+}
+
+.home-content-row-1 div {
+  /* supporting text */
+  width: 60%;
+  padding-left: 16px;
+}
+
+.home-content-row-2 {
+  display: flex;
+  align-items: end;
+  padding: 16px 54px;
+}
+
+.home-content-row-2 .cherry-blossoms {
+  width: 60%;
+  max-width: 450px;
+  height: auto;
+}
+
+.home-content-row-2 .apple-worm {
+  width: 40%;
+  max-width: 300px;
+  height: auto;
+}
+
+.home-apple img {
+  position: absolute;
+  height: 280px;
+  margin-top: 490px;
+  margin-left: 615px;
+}
+
+/* Small Sized Screen Styling */
+@media (max-width: 644px) {
+  .home-content-row-1 {
+    flex-direction: column;
+    font-size: 16px;
+  }
+
+  .home-content-row-1 .andie-dog {
+    width: 80%;
+    min-width: 40px;
+    max-width: 330px;
+  }
+
+  .home-content-row-1 div {
+    width: 100%;
+    padding-top: 8px;
+    padding-left: 0px;
+  }
+
+  .home-content-row-2 {
+    flex-direction: column;
+  }
+
+  .home-content-row-2 {
+    display: flex;
+    padding: 24px 0px;
+  }
+
+  .home-content-row-2 .cherry-blossoms {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+
+  .home-content-row-2 .apple-worm {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+  }
+}
+
+/*
+******** My mustache specific styling ********
+*/
+
+.mustache-photo img {
+  display: block;
+  justify-self: center;
+  padding-right: 32px;
+  max-width: 450px;
+}
+
+.mustache-text {
+  padding-top: 8px;
+  font-size: 18px;
+  color: #d05749;
+}
+
+.mustache-read-here {
+  padding-top: 8px;
+  font-size: 24px;
+}
+
+/* Small Sized Screen Styling */
+@media (max-width: 644px) {
+  .mustache-photo img {
+    width: 100%;
+    padding-right: 0px;
+    max-width: 450px;
+  }
+
+  .mustache-text {
+    font-size: 14px;
+  }
+
+  .mustache-read-here {
+    padding-top: 8px;
+    font-size: 18px;
+  }
+}
+
+/*
+******** Other poetry specific styling ********
+*/
+.other-poetry-text {
+  font-size: 18px;
+}
+
+.other-poetry-text a {
+  text-decoration: underline;
+}
+
+.other-poetry-text .other-poetry-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.other-poetry-text li {
+  padding-bottom: 8px;
+}
+
+.other-poetry-text img {
+  display: block;
+  max-width: 250px;
+  justify-self: flex-end;
+}
+
+/* Small Sized Screen Styling */
+@media (max-width: 644px) {
+  .other-poetry-text {
+    font-size: 14px;
+  }
+
+  .other-poetry-text img {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    justify-self: flex-end;
+  }
+}
+
+/*
+******** Contact specific styling ********
+*/
+.contact-gif img {
+  width: 100%;
+  max-width: 700px;
+}
+
+.contact-text {
+  display: flex;
+  align-items: center;
+  color: #d05749;
+  font-size: 22px;
+}
+
+.contact-mail-icon {
+  max-width: 90px;
+}
+
+/* Small Sized Screen Styling */
+@media (max-width: 644px) {
+  .contact-text {
+    font-size: 14px;
+  }
+
+  .contact-mail-icon {
+    max-width: 75px;
+  }
+}
